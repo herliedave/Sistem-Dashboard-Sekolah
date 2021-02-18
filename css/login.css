@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body, html {
+	font-family: 'Quicksand', sans-serif;
+	height: 100%;
+	/*background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));*/
+	background-color: #e3eaef;
+	overflow: hidden;
+}
+
+button {
+	outline: none !important;
+	border: none !important;
+}
+
+.login-title {
+	margin-top: 40px;
+	font-weight: 300;
+	letter-spacing: 10px;
+	padding: 10px 30px;
+	font-size: 30px;
+}
+
+.form {
+	border-radius: 5px;
+	margin: auto;
+	width: 350px;
+	height: 410px;
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+	background-color: #fff;
+	box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+	border-top: 2px solid #7fd9ff;
+}
+
+.form .card-header {
+	border-bottom-color: #f9f9f9;
+	background-color: #fff;
+	padding: 15px 25px;
+}
+
+.card-header h4 {
+	margin: 0;
+	line-height: 50px;
+}
+
+.form .card-body {
+	padding: 15px 25px;
+}
+
+.form .card-body label {
+	display: block;
+	font-size: 12px;
+}
+
+.card-body .input-grup {
+
+}
+
+.input {
+	border: none;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    padding: 0 20px 0 23px;
+    border: 1px solid rgba(0,0,0,.1);
+    outline: none;
+}
+
+.login {
+	width: 100%;
+	padding: 10px 50px;
+	border: none;
+	background-color: #7fd9ff;
+	color: white;
+	box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+.login:hover {
+	background-color: rgba(129, 45, 212, 0.5);
+}
