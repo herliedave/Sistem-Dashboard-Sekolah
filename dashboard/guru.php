@@ -8,7 +8,7 @@ $waka = mysqli_num_rows($query1);
 $query2 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status = '%Guru%'");
 $guru = mysqli_num_rows($query2);
 
-$query3 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status = '%DLL%'");
+$query3 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status NOT LIKE '%Guru%' OR status NOT LIKE '%Waka%'");
 $dll = mysqli_num_rows($query3);
 
 $query4 = mysqli_query($conn, "SELECT * FROM tbsiswa");
