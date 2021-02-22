@@ -44,46 +44,46 @@ $siswa = mysqli_num_rows($query4);
 
 </head>
 
-<body id="page-top">
-    <input type="hidden" id="waka" value="<?= $waka ?>">
+<!-- <body id="page-top"> -->
+    <!-- <input type="hidden" id="waka" value="<?= $waka ?>">
     <input type="hidden" id="guru" value="<?= $guru ?>">
     <input type="hidden" id="dll" value="<?= $dll ?>">
-    <input type="hidden" id="siswa" value="<?= $siswa ?>">
+    <input type="hidden" id="siswa" value="<?= $siswa ?>"> -->
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+   <!--  <div id="wrapper"> -->
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> -->
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="guru.php">
+           <!--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="guru.php">
                 <div class="sidebar-brand-icon">
                     <img src="img/logo.png" style="width: 2.5rem;">
                 </div>
                 <div class="sidebar-brand-text mx-3">SMK Immanuel</div>
-            </a>
+            </a> -->
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <!-- <hr class="sidebar-divider my-0"> -->
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" href="guru.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+           <!--  <div class="sidebar-heading">
                 Interface
-            </div>  
+            </div>  --> 
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
@@ -97,11 +97,11 @@ $siswa = mysqli_num_rows($query4);
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="../">Menu Utama</a>
                         <a class="collapse-item" href="../calendar.php">Calendar</a>
-                        <a class="collapse-item" href="jadwal.php">Jadwal</a>
+                        <a class="collapse-item" href="jadwal.php">Jadwal</a> -->
 <!--                         <a class="collapse-item" href="../contact.php"></a>
- -->                    </div>
+ -->                    <!-- </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
            <!--  <li class="nav-item">
@@ -121,34 +121,34 @@ $siswa = mysqli_num_rows($query4);
 
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            <!-- <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
             
 
-        </ul>
+        </ul> -->
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <!-- <div id="content-wrapper" class="d-flex flex-column"> -->
 
             <!-- Main Content -->
-            <div id="content">
+            <!-- <div id="content"> -->
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <!-- <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> -->
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <!-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
-                    </button>
+                    </button> -->
 
                     <!-- Topbar Search -->
-                    <form
+                    <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -159,19 +159,19 @@ $siswa = mysqli_num_rows($query4);
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                   <!--  <ul class="navbar-nav ml-auto"> -->
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
+                      <!--   <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                            Dropdown - Messages -->
+                            <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
@@ -186,20 +186,20 @@ $siswa = mysqli_num_rows($query4);
                                     </div>
                                 </form>
                             </div>
-                        </li>
+                        </li> -->
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
+                        <!-- <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION['nama'] ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
-                            </a>
+                            </a> -->
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -210,7 +210,7 @@ $siswa = mysqli_num_rows($query4);
 
                     </ul>
 
-                </nav>
+                </nav> -->
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
