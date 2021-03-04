@@ -5,7 +5,7 @@ require 'koneksi.php';
 $query1 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status LIKE '%Waka%'");
 $waka = mysqli_num_rows($query1);
 
-$query2 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status = '%Guru%'");
+$query2 = mysqli_query($conn, "SELECT * FROM tbguru");
 $guru = mysqli_num_rows($query2);
 
 $query3 = mysqli_query($conn, "SELECT * FROM tbstaff WHERE status NOT LIKE '%Guru%' OR status NOT LIKE '%Waka%'");
@@ -41,6 +41,7 @@ $siswa = mysqli_num_rows($query4);
     <!-- ajax function -->
     <script src="js/script-tbstaff.js"></script>
     <script src="js/script-tbsiswa.js"></script>
+    <script src="js/script-tbguru.js"></script>
 
 </head>
 
@@ -93,16 +94,16 @@ $siswa = mysqli_num_rows($query4);
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data:</h6>
 
-                        <a class="collapse-item" href="index.php">
-                            <i class="fas fa-fw fa-user" onclick="loadTbstaff()"></i> Guru
+                        <a class="collapse-item" onclick="loadTbstaff()">
+                            <i class="fas fa-fw fa-user"></i> Guru
                         </a>
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item">
                             <i class="fas fa-fw fa-user"></i> Staff
                         </a>
 
-                        <a class="collapse-item" href="index.php">
-                            <i class="fas fa-fw fa-user" onclick="loadTbsiswa()"></i> Siswa
+                        <a class="collapse-item" onclick="loadTbsiswa()">
+                            <i class="fas fa-fw fa-user"></i> Siswa
                         </a>
 
                         <div class="collapse-divider"></div>
@@ -439,6 +440,22 @@ $siswa = mysqli_num_rows($query4);
     
 function loadTbstaff() {
     var url = "data/tbstaff/staff.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+
+function loadTbstaff() {
+    var url = "data/tbguru/guru.php";
     var xhttp;
 
     xhttp = new XMLHttpRequest();
