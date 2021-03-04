@@ -1,0 +1,46 @@
+.black-pel {
+	color: black;
+	font-weight: bold;
+	margin: 0;
+}
+
+.garis {
+	margin: 0;
+}
+
+.time {
+	margin: 0;
+}
+
+.btn-content {
+}
+
+.btn-masuk {
+	border-radius: 5px;
+	border: none;
+	background-color: #4e73df;
+	color: white;
+	padding: 5px 15px;
+	transition: .3s;
+}
+
+.btn-masuk:hover {
+	background-color: #7f9df5;
+}
+
+.square {
+	background-color: black;
+}
+
+.contentime {
+	width: 100%;
+	background-color: lightgrey;
+}
+
+.list-jadwal {
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 15px rgba(0,0,0,.1);
+}

@@ -36,11 +36,7 @@ $siswa = mysqli_num_rows($query4);
 
     <!-- Custom styles for this -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/guru.css" rel="stylesheet">
-
-    <!-- ajax function -->
-    <script src="js/script-tbstaff.js"></script>
-    <script src="js/script-tbsiswa.js"></script>
+    <link href="css/siswa.css" rel="stylesheet">
 
 </head>
 
@@ -71,13 +67,22 @@ $siswa = mysqli_num_rows($query4);
                 </a>
             </li>  
 
+            <!-- Nav Item - Jadwal -->
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Jadwal</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Kalender -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="">
                     <i class="fas fa-fw fa-calendar-minus"></i>
                     <span>Kalender</span>
                 </a>
             </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -86,8 +91,6 @@ $siswa = mysqli_num_rows($query4);
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            
 
         </ul>
         <!-- End of Sidebar -->
@@ -159,89 +162,10 @@ $siswa = mysqli_num_rows($query4);
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang, <?= $_SESSION['nama'] ?></h1>
+                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang Kembali, <?= $_SESSION['nama'] ?></h1>
                     </div>
 
-                    <!-- Content Row -->
-                    <!-- <div class="row"> -->
-
-                        <!-- Earnings (Monthly) Card Example -->
-                       <!--  <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Waka</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $waka ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <!-- <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Total Guru</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $guru ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <!-- <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Staf lain lain
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $dll ?></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Pending Requests Card Example -->
-                      <!--   <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Jumlah Siswa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $siswa ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                   <!--  </div> -->
-
+                   
                     <!-- Content Row -->
 
                     <div class="row">
@@ -254,41 +178,51 @@ $siswa = mysqli_num_rows($query4);
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Jadwal Hari ini:</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="jadwal.php">Lihat semua
-                                            <!-- <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i> -->
+                                        <a class="dropdown-toggle" href="">Lihat semua
+                                        
                                         </a>
                                     </div>
                                 </div>
-                                <div class="card-header py-3 d-flex flex-row align-items-center">
-                                    <div class="card-header py-3 d-flex flex-row align-items-center contentime">
-                                    <h6 class="black-pel">Matematika</h6>
-                                    <div class="time">
-                                        <span>07.00 - 10.00</span>
+
+                                <div class="card-header py-3 d-flex flex-column align-items-center">
+
+                                    <div class="list-jadwal d-flex flex-row align-items-center justify-content-between mb-4">
+
+                                        <div class="jadwal-content d-flex justify-content-between align-items-center">
+                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">PKN</h5>
+
+                                            <p class="garis mr-2">|</p>
+
+                                            <h6 class="black-pel mr-4">Suvento</h6>
+
+                                            <p class="time mr-2">10:00 - 12:00</p>
+                                        </div>
+
+
+                                        <div class="btn-content">
+                                            <button class="btn-masuk" id="" name="">Masuk</button>
+                                        </div>
                                     </div>
-                                    <div class="btn-content">
-                                        <button class="btn-masuk" id="" name="">Masuk</button>
+
+                                    <div class="list-jadwal d-flex flex-row align-items-center justify-content-between">
+
+                                        <div class="jadwal-content d-flex justify-content-between align-items-center">
+                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">Matematika</h5>
+
+                                            <p class="garis mr-2">|</p>
+
+                                            <h6 class="black-pel mr-4">Sondang Elisabeth</h6>
+
+                                            <p class="time mr-2">09:00 - 10:00</p>
+                                        </div>
+
+
+                                        <div class="btn-content">
+                                            <button class="btn-masuk" id="" name="">Masuk</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Card Body -->
-                                <!-- <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Waka
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Guru
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> DLL
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-warning"></i> Siswa
-                                        </span>
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -348,63 +282,6 @@ $siswa = mysqli_num_rows($query4);
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-pie-demo.js"></script>
-
     
-
-<script>
-    
-function loadTbstaff() {
-    var url = "data/tbstaff/staff.php";
-    var xhttp;
-
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = this.responseText;
-            document.getElementById("data").innerHTML = data;
-        }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-}
-
-
-function loadTbsiswa() {
-    var url = "data/tbsiswa/siswa.php";
-    var xhttp;
-
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = this.responseText;
-            document.getElementById("data").innerHTML = data;
-        }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-}
-
-function loadJadwal(){
-    var url = "jadwal.php";
-    var xhttp;
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = this.responseText;
-            document.getElementById("data").innerHTML = data;
-        }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-
-}
-
-</script>
 </body>
 </html>
