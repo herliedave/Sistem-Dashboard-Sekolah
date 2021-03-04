@@ -45,11 +45,7 @@ $siswa = mysqli_num_rows($query4);
 </head>
 
 <body id="page-top">
-    <input type="hidden" id="waka" value="<?= $waka ?>">
-    <input type="hidden" id="guru" value="<?= $guru ?>">
-    <input type="hidden" id="dll" value="<?= $dll ?>">
-    <input type="hidden" id="siswa" value="<?= $siswa ?>">
-
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -71,55 +67,17 @@ $siswa = mysqli_num_rows($query4);
             <li class="nav-item active">
                 <a class="nav-link" href="">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>  
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Dashboard</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Guru Login Screens:</h6>
-                        <a class="collapse-item" href="index.php">Login</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="murid.php">Menu Utama</a>
-                        <a class="collapse-item" href="../calendar.php">Calendar</a>
-                        <a class="collapse-item" onclick="loadJadwal()">Jadwal</a>
-                        <a class="collapse-item" href="status.php">Status SPP</a>
-<!--                         <a class="collapse-item" href="../contact.php"></a>
- -->                    </div>
-                </div>
-            </li>
+            </li>  
 
-            <!-- Nav Item - Tables -->
-           <!--  <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetable"
-                    aria-expanded="true" aria-controls="collapsetable">
-                    <i class="fas fa-database fa-cog"></i>
-                    <span>Tables</span>
+            <!-- Nav Item - Kalender -->
+            <li class="nav-item active">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-calendar-minus"></i>
+                    <span>Kalender</span>
                 </a>
-                <div id="collapsetable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tabel tersedia:</h6>
-                        <a class="collapse-item" onclick="loadTbstaff()">Tabel Staff</a>
-                        <a class="collapse-item" onclick="loadTbsiswa()">Tabel Siswa</a>
-                    </div>
-                </div>
-            </li> -->
-
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -148,29 +106,11 @@ $siswa = mysqli_num_rows($query4);
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">

@@ -73,16 +73,7 @@ require '../../koneksi.php';
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Kode</th>
-                                <th>Nama</th>
-                                <th>Status</th>
-                                <th>Pelajaran</th>
-                                <th>Jam Mengajar</th>
-                                <th>Action</th>
-                            </tr>
-                        </tfoot>
+
                         <tbody>
                             <?php 
                                 $query = mysqli_query($conn, "SELECT * FROM tbstaff");

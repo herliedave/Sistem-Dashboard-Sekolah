@@ -87,18 +87,47 @@ $siswa = mysqli_num_rows($query4);
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Data Master</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Admin Login Screens:</h6>
-                        <a class="collapse-item" href="index.php">Login</a>
+                        <h6 class="collapse-header">Data:</h6>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-user" onclick="loadTbstaff()"></i> Guru
+                        </a>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-user"></i> Staff
+                        </a>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-user" onclick="loadTbsiswa()"></i> Siswa
+                        </a>
+
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="../">Page Utama</a>
-                        <a class="collapse-item" href="../catalog.php">Page Catalog</a>
-                        <a class="collapse-item" href="../project.php">Page Project</a>
-                        <a class="collapse-item" href="../contact.php">Page Contact</a>
+                        <h6 class="collapse-header">Data Lain:</h6>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-book"></i> Pelajaran
+                        </a>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-home"></i> Kelas
+                        </a>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-clock"></i> Jam
+                        </a>                        
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-calendar"></i> Hari
+                        </a>
+
+                        <a class="collapse-item" href="index.php">
+                            <i class="fas fa-fw fa-ban"></i> Waktu tidak bersedia
+                        </a>
+
                     </div>
                 </div>
             </li>
@@ -108,13 +137,12 @@ $siswa = mysqli_num_rows($query4);
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetable"
                     aria-expanded="true" aria-controls="collapsetable">
                     <i class="fas fa-database fa-cog"></i>
-                    <span>Tables</span>
+                    <span>Proses Data</span>
                 </a>
                 <div id="collapsetable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tabel tersedia:</h6>
-                        <a class="collapse-item" onclick="loadTbstaff()">Tabel Staff</a>
-                        <a class="collapse-item" onclick="loadTbsiswa()">Tabel Siswa</a>
+                        <h6 class="collapse-header">Proses Data :</h6>
+                        <a class="collapse-item"><i class="fas fa-fw fa-calendar-minus"></i> Penjadwalan</a>
                     </div>
                 </div>
             </li>

@@ -20,16 +20,7 @@ require '../../koneksi.php';
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Nis</th>
-                        <th>Nama</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>SPP lunas hingga</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+                
                 <tbody>
                     <?php 
                         $query = mysqli_query($conn, "SELECT * FROM tbsiswa");
