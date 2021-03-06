@@ -30,7 +30,6 @@ function saveGuru() {
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			data = this.responseText;
-			alert(data);
 			loadGuru();
 		}
 	};
@@ -54,13 +53,12 @@ function deleteGuru(id){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			loadtbguru();
+			loadTbguru();
 		}
 	};
 
 	xhttp.open("GET", url, true);
 	xhttp.send();
-	loadGuru();
 }
 
 function editGuru(kode, nama, status, pelajaran, jam) {
@@ -75,5 +73,5 @@ function editGuru(kode, nama, status, pelajaran, jam) {
 
 
 function clearGuru() {
-	loadtbguru();
+	loadTbguru();
 }

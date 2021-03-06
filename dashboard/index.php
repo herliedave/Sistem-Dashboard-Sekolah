@@ -66,16 +66,6 @@ $siswa = mysqli_num_rows($query4);
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
@@ -94,11 +84,11 @@ $siswa = mysqli_num_rows($query4);
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data:</h6>
 
-                        <a class="collapse-item" onclick="loadTbstaff()">
+                        <a class="collapse-item" onclick="loadTbguru()">
                             <i class="fas fa-fw fa-user"></i> Guru
                         </a>
 
-                        <a class="collapse-item">
+                        <a class="collapse-item" onclick="loadTbstaff()">
                             <i class="fas fa-fw fa-user"></i> Staff
                         </a>
 
@@ -341,12 +331,6 @@ $siswa = mysqli_num_rows($query4);
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Grafik Data</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -454,7 +438,7 @@ function loadTbstaff() {
 }
 
 
-function loadTbstaff() {
+function loadTbguru() {
     var url = "data/tbguru/guru.php";
     var xhttp;
 

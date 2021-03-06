@@ -29,14 +29,3 @@ else :
 	$query = mysqli_query($conn, $sql) or die ($sql);
 
 endif;
-
-
-if (mysqli_affected_rows($conn) > 0) :
-
-	echo "Berhasil Melakukan perubahan";
-
-else :
-
-	echo "Gagal Melakukan Perubahan";
-
-endif;
