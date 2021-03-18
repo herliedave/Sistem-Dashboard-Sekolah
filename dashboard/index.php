@@ -42,6 +42,7 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/script-tbstaff.js"></script>
     <script src="js/script-tbsiswa.js"></script>
     <script src="js/script-tbguru.js"></script>
+    <script src="js/script-tbhari.js"></script>
 
 </head>
 
@@ -111,7 +112,7 @@ $siswa = mysqli_num_rows($query4);
                             <i class="fas fa-fw fa-clock"></i> Jam
                         </a>                        
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item" onclick="loadTbhari()">
                             <i class="fas fa-fw fa-calendar"></i> Hari
                         </a>
 
@@ -165,20 +166,6 @@ $siswa = mysqli_num_rows($query4);
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -456,6 +443,21 @@ function loadTbguru() {
 
 function loadTbsiswa() {
     var url = "data/tbsiswa/siswa.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+function loadTbhari() {
+    var url = "data/tbhari/hari.php";
     var xhttp;
 
     xhttp = new XMLHttpRequest();
