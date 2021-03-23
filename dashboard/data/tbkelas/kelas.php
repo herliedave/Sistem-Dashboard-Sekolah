@@ -56,6 +56,7 @@ require '../../koneksi.php';
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead style="text-align: center">
                             <tr>
+				<th>No</th>
                                 <th>Nama</th>
                                 <th>Kapasitas</th>
                                 <th>Action</th>
