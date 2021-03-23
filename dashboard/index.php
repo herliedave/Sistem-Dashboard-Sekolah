@@ -44,6 +44,7 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/script-tbguru.js"></script>
     <script src="js/script-tbhari.js"></script>
     <script src="js/script-tbkelas.js"></script>
+    <script src="js/script-tbjam.js"></script>
 
 </head>
 
@@ -109,7 +110,7 @@ $siswa = mysqli_num_rows($query4);
                             <i class="fas fa-fw fa-home"></i> Kelas
                         </a>
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item" onclick="loadTbjam()">
                             <i class="fas fa-fw fa-clock"></i> Jam
                         </a>                        
 
@@ -474,6 +475,21 @@ function loadTbhari() {
 
 function loadTbkelas() {
     var url = "data/tbkelas/kelas.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+function loadTbjam() {
+    var url = "data/tbjam/jam.php";
     var xhttp;
 
     xhttp = new XMLHttpRequest();
